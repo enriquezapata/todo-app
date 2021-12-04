@@ -1,0 +1,16 @@
+ul {
+    margin: 0;
+    padding: 0 0 56px 0;
+    list-style: none;
+    width: 100%;
+  }
+
+.listSection {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  align-content: flex-start;
+  gap: 10px 20px;
+  justify-content: flex-start;
+}
