@@ -39,15 +39,13 @@ function TodoForm() {
                 <button
                     type="button"
                     onClick={onCancel}
-                    className="TodoForm-button TodoForm-button--cancel"
-                >
-                        Cancelar
+                    className="waves-effect waves-light btn TodoForm-button TodoForm-button--cancel">
+                    Cancelar
                 </button>
                 <button
                     type="submit" 
                     onClick={onSubmit}
-                    className="TodoForm-button TodoForm-button--add"
-                >
+                    className="waves-effect waves-light btn TodoForm-button TodoForm-button--add">
                     Añadir
                 </button>
             </div>

@@ -11,12 +11,14 @@ function TodoSearch() {
   };
 
   return (
-    <input
-      className="TodoSearch"
-      placeholder="Buscar tareas ..."
-      value={searchValue}
-      onChange={onSearchValueChange}
-    />
+
+    <div className="section">
+          <div className="input-field">
+                <i className="material-icons prefix">search</i>
+                <input id="icon_prefix" type="text" className="validate" onChange={onSearchValueChange} value={searchValue} />
+                <label htmlFor="icon_prefix">Buscar tareas ...</label>
+          </div>
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { TodoNavBar } from '../TodoNavBar';
 import { TodoContext } from '../TodoContext';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
@@ -9,7 +10,7 @@ import { TodoError } from '../TodoError';
 import { TodoLoading } from '../TodoLoading';
 import { TodoEmpty } from '../TodoEmpty';
 import { CreateTodoButton } from '../CreateTodoButton';
-import { Modal } from '../Modal';
+import { TodoModal } from '../TodoModal';
 
 function AppUI() {
   const {
@@ -24,32 +25,36 @@ function AppUI() {
   
   return (
     <React.Fragment>
-      <TodoCounter />
-      <div className="blockSpace" />
+
       <div className="container">
-        <TodoSearch />
-        <div className="blockSpace" />
-        <TodoList>
-        {error && <TodoError />}
-        {loading && <TodoLoading />}
-        {(!loading && !searchedTodos.length) && <TodoEmpty />}
-          
-          {searchedTodos.map(todo => (
-            <TodoItem
-              key={todo.text}
-              text={todo.text}
-              completed={todo.completed}
-              onComplete={() => completeTodo(todo.text)}
-              onDelete={() => deleteTodo(todo.text)}
-            />
-          ))}
-        </TodoList>
+        <TodoNavBar />
+        <TodoCounter />
+        <div className="container">
+          <div className="row ">
+            <TodoSearch />
+            <TodoList>
+            {error && <TodoError />}
+            {loading && <TodoLoading />}
+            {(!loading && !searchedTodos.length) && <TodoEmpty />}
+              
+              {searchedTodos.map(todo => (
+                <TodoItem
+                  key={todo.text}
+                  text={todo.text}
+                  completed={todo.completed}
+                  onComplete={() => completeTodo(todo.text)}
+                  onDelete={() => deleteTodo(todo.text)}
+                />
+              ))}
+            </TodoList>
+          </div>
+        </div>
       </div>
 
       {!!openModal && (
-        <Modal>
+        <TodoModal>
           <TodoForm />
-        </Modal>
+        </TodoModal>
       )}
 
       <CreateTodoButton

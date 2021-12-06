@@ -1,7 +1,7 @@
 form {
     width: 90%;
     border-radius: 20px;
-    max-width: 300px;
+    max-width: 400px;
     background-color: #fff;
     padding: 33px 40px;
     display: flex;
@@ -54,7 +54,7 @@ form {
   .TodoForm-button {
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     color: #202329;
     font-weight: 400;
     width: 120px;
@@ -76,3 +76,8 @@ form {
     color: #fff;
     border-radius: 10px;
   }
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #ffc947;
+}
+

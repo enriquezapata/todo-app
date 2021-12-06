@@ -7,7 +7,13 @@ function TodoCounter() {
   const headerText = totalTodos > 0 ? "Has completado " + completedTodos + " de " + totalTodos + " TODOs" : "No tienes tareas";
 
   return (
-    <h2 className="TodoCounter">{headerText}</h2> 
+    <div className="section">
+      <div className="row">
+        <div className="col s12 center">
+          <h4>{headerText}</h4>
+        </div>
+      </div> 
+    </div>
   );
 }
 

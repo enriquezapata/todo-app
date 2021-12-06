@@ -7,12 +7,13 @@ function CreateTodoButton(props) {
   };
   
   return (
-    <button
-      className="CreateTodoButton"
-      onClick={onClickButton}
-    >
-      +
-    </button>
+
+    <a href="#!" className="btn-floating btn-large waves-effect waves-light CreateTodoButton" onClick={onClickButton}>
+      <i className="material-icons">
+        add
+      </i>
+    </a>
+    
   );
 }
 
